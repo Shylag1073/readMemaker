@@ -1,6 +1,15 @@
 // TODO: Include packages needed for this application
+const path
 const fs = require("fs");
 const inquirer = require("inquirer");
+const generatePage = (README) => {
+    return `
+
+    
+     `;
+};
+
+
 
 // TODO: Create an array of questions for user input
 
@@ -44,9 +53,11 @@ inquirer.prompt([
 ])
     .then(answers => console.log(answers));
 
- // TODO: Create a function to write README file
+// TODO: Create a function to write README file
 
-function writeToFile(fileName, data) { }
+function writeToFile(fileName, answers) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), answers)
+}
 
 // TODO: Create a function to initialize app
 
