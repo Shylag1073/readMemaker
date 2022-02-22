@@ -1,13 +1,13 @@
 // TODO: Include packages needed for this application
-const path
+//const path = require("path")
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generatePage = (README) => {
-    return `
+//const generatePage = (README) => {
+//  return `
 
-    
-     `;
-};
+
+//   `;
+//};
 
 
 
@@ -26,7 +26,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'Url to your project',
+        name: 'Url',
         message: 'What is the Url to your project?'
     },
     {
@@ -51,17 +51,58 @@ inquirer.prompt([
         message: 'How can users contribute to this repo ?'
     }
 ])
-    .then(answers => console.log(answers));
+    .then(answers => {
+        console.log(answers);
 
-// TODO: Create a function to write README file
+        // TODO: Create a function to write README file
 
-function writeToFile(fileName, answers) {
-    return fs.writeFileSync(path.join(process.cwd(), fileName), answers)
-}
+
+
+        fs.writeFileSync('./output/README.md', `
+## 🌟 ${answers.title}
+
+## Table of Context 
+
+* [Description](#description)
+* [Contributing](#contributing)
+* [License](#license)
+* [Installation](#installation)
+* [Website](#website)
+* [Questions](#questions)
+
+## Description
+
+${answers.description}
+
+
+##  👨‍💻 Website
+
+${answers.Url}
+
+## License
+${answers.license}
+
+## ✍️ Authors
+
+${answers.Contributing}
+
+
+## Questions
+
+https://github.com/${answers.github}
+
+Please reach out if you have any question via email ${answers.email}
+
+
+
+`)
+    })
+//function writeToFile(fileName, answers) {
+    //return fs.writeFile('./index'
+    // path.join(process.cwd(), fileName), answers);
+
+
+//}
 
 // TODO: Create a function to initialize app
 
-function init() { }
-
-// Function call to initialize app
-init();
