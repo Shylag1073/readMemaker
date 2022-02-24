@@ -14,24 +14,25 @@
 
 shyla
 
+## Installation
+shyla
+
 
 ##  👨‍💻 Website
 
 shyla
 
 ## License
+
 MIT
 
-## ✍️ Authors
+## ✍️ Contributing
 
-shy
-
+shyla
 
 ## Questions
 
-https://github.com/Shyla
+https://github.com/shyla
 
-Please reach out if you have any question via email Shyla@shyla
-
-
+Please reach out if you have any question via email shyla
 

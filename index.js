@@ -40,6 +40,11 @@ inquirer.prompt([
         message: 'Write a short descripation about your project.'
     },
     {
+        type: 'input',
+        name: 'installation',
+        message: 'What are the steps required to install your project?'
+    },
+    {
         type: 'list',
         name: 'license',
         message: 'What kind of license?',
@@ -74,26 +79,27 @@ inquirer.prompt([
 
 ${answers.description}
 
+## Installation
+${answers.installation}
+
 
 ##  👨‍💻 Website
 
 ${answers.Url}
 
 ## License
+
 ${answers.license}
 
-## ✍️ Authors
+## ✍️ Contributing
 
 ${answers.Contributing}
-
 
 ## Questions
 
 https://github.com/${answers.github}
 
 Please reach out if you have any question via email ${answers.email}
-
-
 
 `)
     })
